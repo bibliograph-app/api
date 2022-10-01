@@ -34,6 +34,7 @@
           packages = with pkgs; [
             alejandra
             treefmt
+            dprint
           ];
           commands = [
             {
