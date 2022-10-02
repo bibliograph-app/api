@@ -64,25 +64,38 @@ type Book implements Reference {
   isbn: String
   thumbnail: String
 
-  fromRelations(
+  relations(
     after: String,
     before: String,
     first: Int,
     last: Int,
     orderBy: RelationOrder!,
-  ): RelationConnection!
-  toRelations(
-    after: String,
-    before: String,
-    first: Int,
-    last: Int,
-    orderBy: RelationOrder!,
+    query: RelationQuery!
   ): RelationConnection!
 }
 
 type Relation implements Node {
+  id: ID!
   from: Reference!
   to: Reference!
+  type: RelationType!
+}
+
+interface RelationType {
+  tag: RelationTypeTag!
+}
+
+enum RelationTypeTag {
+  REFER
+  TRANSLATE
+}
+
+type RelationReferType implements RelationType {
+  tag: RelationTypeTag!
+}
+
+type RelationTranslateType implements RelationType {
+  tag: RelationTypeTag!
 }
 
 type RelationEdge implements Edge {
@@ -103,6 +116,17 @@ input RelationOrder {
 
 enum RelationOrderField {
   TITLE
+}
+
+input RelationQuery {
+  direction: RelationQueryDirection!
+  nest: Int!
+  type: []
+}
+
+enum RelationQueryDirection {
+  FORWARD
+  BACKWARD
 }
 
 type Query {
