@@ -1,0 +1,53 @@
+- id: 4e96602b-ebe2-4204-87f1-ddd6144b82e0
+  title: プログラミング言語の基礎概念
+  authors:
+    - id: 94bb6b4b-bb8b-4369-bafd-95a9639971c3
+
+- id: fae83103-432a-428f-b809-6331b41cb482
+  title: 論理と計算のしくみ
+  authors:
+    - id: 4dcb595a-c528-4f04-8fbc-3c481d9c0148
+    - id: 150c5c26-4f4b-4876-b74f-7d70b159b035
+
+- id: 42b21823-3e33-4c71-9cd1-36f0bc7ffda8
+  title: プログラム意味論
+  authors:
+    - id: b18e13d2-e98d-4932-b200-6e30b8fd3fd3
+
+- id: cb6e5656-811c-46a8-ac15-54239df5ff3c
+  title: 計算論 計算可能性とラムダ計算
+  authors:
+    - id: a3af7f1b-d5d2-4147-b7c1-104f00a9985d
+
+- id: ef993db3-6df3-48f9-ab23-dc64e2ae8a87
+  title: Types and Programming Languages
+  authors:
+    - id: cdbf20c4-2c03-49bd-819d-16873e199528
+
+- id: d1d43a80-a3ca-4338-bbb6-29aeb4f915bb
+  title: 型システム入門 プログラミング言語と型の理論
+  authors:
+    - id: cdbf20c4-2c03-49bd-819d-16873e199528
+    - id: e5515c70-7ec0-4cc1-8821-2e0ea0c3a475
+    - id: 5fb48a11-c8d8-47c6-82a9-a036fd005f90
+    - id: 069e13b4-45d8-497d-8b7f-f0635ee27ff1
+    - id: b8c9706c-ff03-46a4-849b-e438090346f9
+    - id: c5d3f669-72af-419e-a03e-35a76cc23341
+    - id: ee096d54-e81e-4452-9204-dede1c081bb4
+    - id: ba40fccb-e174-438f-a333-bc391af7a502
+    - id: 0ab18404-60b7-45bf-9467-82543ea8e8e5
+
+- id: 703235c1-90c8-4d26-8596-2dbab50f77a5
+  title: 数理論理学
+  authors:
+    - id: 88929cd4-ae21-4ed0-ba7b-3dba07c53ccc
+
+- id: 2b209ee4-6f60-4cb7-a4e5-2e88b9b6b35c
+  title: 論理学をつくる
+  authors:
+    - id: 2b209ee4-6f60-4cb7-a4e5-2e88b9b6b35c
+
+- id: 4462aa1e-ec6d-4780-b93f-eb67063910b9
+  title: コンピュータサイエンスにおける様相論理
+  authors:
+    - id: 910f14a3-8ced-40b3-8fc2-7e8c9267ad7b

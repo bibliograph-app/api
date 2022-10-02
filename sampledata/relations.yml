@@ -1,0 +1,55 @@
+# プログラミング言語の基礎概念
+- id: 9a899e4f-ab32-4aba-8464-1e8a26fdbe3e
+  from: 4e96602b-ebe2-4204-87f1-ddd6144b82e0
+  to: fae83103-432a-428f-b809-6331b41cb482
+  type:
+    tag: REFER
+- id: 2d85d16c-bc23-4730-abb3-f597c3cb10c3
+  from: 4e96602b-ebe2-4204-87f1-ddd6144b82e0
+  to: 42b21823-3e33-4c71-9cd1-36f0bc7ffda8
+  type:
+    tag: REFER
+- id: 5750d6b0-8513-4f12-81cb-af793efd2903
+  from: 4e96602b-ebe2-4204-87f1-ddd6144b82e0
+  to: cb6e5656-811c-46a8-ac15-54239df5ff3c
+  type:
+    tag: REFER
+- id: 5750d6b0-8513-4f12-81cb-af793efd2903
+  from: 4e96602b-ebe2-4204-87f1-ddd6144b82e0
+  to: ef993db3-6df3-48f9-ab23-dc64e2ae8a87
+  type:
+    tag: REFER
+
+# プログラム意味論
+- id: 5b32d003-9f86-4d27-967e-a10438a29950
+  from: 7a3989be-90df-40da-869c-3099c414b826
+  to: cb6e5656-811c-46a8-ac15-54239df5ff3c
+  type:
+    tag: REFER
+
+# 数理論理学(戸次)
+- id: 1ebda69c-0a2f-4d39-b597-7222420af6b6
+  from: 703235c1-90c8-4d26-8596-2dbab50f77a5
+  to: fae83103-432a-428f-b809-6331b41cb482
+  type:
+    tag: REFER
+
+# コンピュータサイエンスにおける様相論理
+- id: 4b2750fb-7969-42f2-a678-e1e036ce211c
+  from: 4462aa1e-ec6d-4780-b93f-eb67063910b9
+  to: fae83103-432a-428f-b809-6331b41cb482
+  type:
+    tag: REFER
+- id: 50b343d8-fad2-4eb8-a24e-c4aebd42c571
+  from: 4462aa1e-ec6d-4780-b93f-eb67063910b9
+  to: 703235c1-90c8-4d26-8596-2dbab50f77a5
+  type:
+    tag: REFER
+
+# TaPL(原著)
+- id: 5750d6b0-8513-4f12-81cb-af793efd2903
+  from: ef993db3-6df3-48f9-ab23-dc64e2ae8a87
+  to: d1d43a80-a3ca-4338-bbb6-29aeb4f915bb
+  type:
+    tag: TRANSLATE
+    lang: ja
