@@ -1,0 +1,232 @@
+{
+  "tags": [
+    {
+      "id": "4c1a1acc-f4e7-4238-b797-088392e6a67c",
+      "names": [
+        { "name": "計算論", "lang": "ja" }
+      ]
+    },
+    {
+      "id": "c08585f7-1df7-4cf4-b5cd-e0297539dbef",
+      "names": [
+        { "name": "ラムダ計算", "lang": "ja" }
+      ]
+    },
+    {
+      "id": "84e9f32e-e4f4-4ad5-bbf5-208f507644c2",
+      "names": [
+        { "name": "論理学", "lang": "ja" }
+      ]
+    },
+    {
+      "id": "e213ea3f-2e6a-4849-a2bb-0c5140b22d8e",
+      "names": [
+        { "name": "命題論理", "lang": "ja" }
+      ]
+    },
+    {
+      "id": "9433fe7a-2522-42d5-8c7b-0e7677952915",
+      "names": [
+        { "name": "述語論理", "lang": "ja" }
+      ]
+    }
+  ],
+  "authors": [
+    {
+      "id": "94bb6b4b-bb8b-4369-bafd-95a9639971c3",
+      "name": "五十嵐　淳"
+    },
+    {
+      "id": "4dcb595a-c528-4f04-8fbc-3c481d9c0148",
+      "name": "萩谷　昌己"
+    },
+    {
+      "id": "150c5c26-4f4b-4876-b74f-7d70b159b035",
+      "name": "西崎　真也"
+    },
+    {
+      "id": "b18e13d2-e98d-4932-b200-6e30b8fd3fd3",
+      "name": "横内　寛文"
+    },
+    {
+      "id": "a3af7f1b-d5d2-4147-b7c1-104f00a9985d",
+      "name": "高橋　正子"
+    },
+    {
+      "id": "e5515c70-7ec0-4cc1-8821-2e0ea0c3a475",
+      "name": "Benjamin C. Pierce"
+    },
+    {
+      "id": "e5515c70-7ec0-4cc1-8821-2e0ea0c3a475",
+      "name": "遠藤　侑介"
+    },
+    {
+      "id": "5fb48a11-c8d8-47c6-82a9-a036fd005f90",
+      "name": "住井　英二郎"
+    },
+    {
+      "id": "069e13b4-45d8-497d-8b7f-f0635ee27ff1",
+      "name": "酒井　政裕"
+    },
+    {
+      "id": "b8c9706c-ff03-46a4-849b-e438090346f9",
+      "name": "今井　敬吾"
+    },
+    {
+      "id": "c5d3f669-72af-419e-a03e-35a76cc23341",
+      "name": "黒木　裕介"
+    },
+    {
+      "id": "ee096d54-e81e-4452-9204-dede1c081bb4",
+      "name": "今井　宜洋"
+    },
+    {
+      "id": "ba40fccb-e174-438f-a333-bc391af7a502",
+      "name": "才川　隆文"
+    },
+    {
+      "id": "0ab18404-60b7-45bf-9467-82543ea8e8e5",
+      "name": "今井　健男"
+    }
+  ],
+  "books": [
+    {
+      "id": "4e96602b-ebe2-4204-87f1-ddd6144b82e0",
+      "title": "プログラミング言語の基礎概念",
+      "isbn": "9784781912851",
+      "authors": [
+        {
+          "id": "94bb6b4b-bb8b-4369-bafd-95a9639971c3"
+        }
+      ]
+    },
+    {
+      "id": "fae83103-432a-428f-b809-6331b41cb482",
+      "title": "論理と計算の仕組み",
+      "isbn": "9784000061919",
+      "authors": [
+        {
+          "id": "4dcb595a-c528-4f04-8fbc-3c481d9c0148"
+        },
+        {
+          "id": "150c5c26-4f4b-4876-b74f-7d70b159b035"
+        }
+      ],
+      "keywords": [
+        "4c1a1acc-f4e7-4238-b797-088392e6a67c",
+        "c08585f7-1df7-4cf4-b5cd-e0297539dbef",
+        "e213ea3f-2e6a-4849-a2bb-0c5140b22d8e",
+        "9433fe7a-2522-42d5-8c7b-0e7677952915"
+      ]
+    },
+    {
+      "id": "42b21823-3e33-4c71-9cd1-36f0bc7ffda8",
+      "title": "プログラム意味論",
+      "isbn": "9784320026575",
+      "authors": [
+        {
+          "id": "b18e13d2-e98d-4932-b200-6e30b8fd3fd3"
+        }
+      ],
+      "keywords": [
+        "c08585f7-1df7-4cf4-b5cd-e0297539dbef"
+      ]
+    },
+    {
+      "id": "cb6e5656-811c-46a8-ac15-54239df5ff3c",
+      "title": "計算論 計算可能性とラムダ計算",
+      "isbn": "9784764901841",
+      "authors": [
+        {
+          "id": "a3af7f1b-d5d2-4147-b7c1-104f00a9985d"
+        }
+      ],
+      "keywords": [
+        "4c1a1acc-f4e7-4238-b797-088392e6a67c",
+        "c08585f7-1df7-4cf4-b5cd-e0297539dbef"
+      ]
+    },
+    {
+      "id": "ef993db3-6df3-48f9-ab23-dc64e2ae8a87",
+      "title": "Types and Programming Languages",
+      "isbn": "0262162091",
+      "authors": [
+        {
+          "id": "e5515c70-7ec0-4cc1-8821-2e0ea0c3a475"
+        }
+      ],
+      "keywords": [
+        "c08585f7-1df7-4cf4-b5cd-e0297539dbef"
+      ]
+    },
+    {
+      "id": "d1d43a80-a3ca-4338-bbb6-29aeb4f915bb",
+      "title": "型システム入門 プログラミング言語と型の理論",
+      "isbn": "9784274069116",
+      "authors": [
+        {
+          "id": "e5515c70-7ec0-4cc1-8821-2e0ea0c3a475"
+        },
+        {
+          "id": "e5515c70-7ec0-4cc1-8821-2e0ea0c3a475"
+        },
+        {
+          "id": "5fb48a11-c8d8-47c6-82a9-a036fd005f90"
+        },
+        {
+          "id": "069e13b4-45d8-497d-8b7f-f0635ee27ff1"
+        },
+        {
+          "id": "b8c9706c-ff03-46a4-849b-e438090346f9"
+        },
+        {
+          "id": "c5d3f669-72af-419e-a03e-35a76cc23341"
+        },
+        {
+          "id": "ee096d54-e81e-4452-9204-dede1c081bb4"
+        },
+        {
+          "id": "ba40fccb-e174-438f-a333-bc391af7a502"
+        },
+        {
+          "id": "0ab18404-60b7-45bf-9467-82543ea8e8e5"
+        }
+      ],
+      "keywords": [
+        "c08585f7-1df7-4cf4-b5cd-e0297539dbef"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "from": "4e96602b-ebe2-4204-87f1-ddd6144b82e0",
+      "to": "fae83103-432a-428f-b809-6331b41cb482",
+      "type": { "tag": "REFER" }
+    },
+    {
+      "from": "4e96602b-ebe2-4204-87f1-ddd6144b82e0",
+      "to": "cb6e5656-811c-46a8-ac15-54239df5ff3c",
+      "type": { "tag": "REFER" }
+    },
+    {
+      "from": "4e96602b-ebe2-4204-87f1-ddd6144b82e0",
+      "to": "42b21823-3e33-4c71-9cd1-36f0bc7ffda8",
+      "type": { "tag": "REFER" }
+    },
+    {
+      "from": "4e96602b-ebe2-4204-87f1-ddd6144b82e0",
+      "to": "ef993db3-6df3-48f9-ab23-dc64e2ae8a87",
+      "type": { "tag": "REFER" }
+    },
+    {
+      "from": "4e96602b-ebe2-4204-87f1-ddd6144b82e0",
+      "to": "cb6e5656-811c-46a8-ac15-54239df5ff3c",
+      "type": { "tag": "REFER" }
+    },
+    {
+      "from": "ef993db3-6df3-48f9-ab23-dc64e2ae8a87",
+      "to": "d1d43a80-a3ca-4338-bbb6-29aeb4f915bb",
+      "type": { "tag": "TRANSLATE", "lang": "ja" }
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+interface Node {
+  id: ID!
+}
+
+interface Edge {
+  cursor: String!
+  node: Node!
+}
+
+interface Connection {
+  edges: [Edge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type PageInfo {
+  startCursor: String
+  endCursor: String
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+}
+
+enum OrderDirection {
+  ASC
+  DESC
+}
+
+type Keyword {
+  id: ID!
+  name(lang: String!): String!
+}
+
+type Author {
+  id: ID!
+  name: String!
+}
+
+interface Reference {
+  id: ID!
+  title: String!
+  authors: [Author!]!
+
+  fromRelations(
+    after: String,
+    before: String,
+    first: Int,
+    last: Int,
+    orderBy: RelationOrder!,
+  ): RelationConnection!
+  toRelations(
+    after: String,
+    before: String,
+    first: Int,
+    last: Int,
+    orderBy: RelationOrder!,
+  ): RelationConnection!
+}
+
+type Book implements Reference {
+  id: ID!
+  title: String!
+  authors: [Author!]!
+
+  isbn: String
+  thumbnail: String
+
+  fromRelations(
+    after: String,
+    before: String,
+    first: Int,
+    last: Int,
+    orderBy: RelationOrder!,
+  ): RelationConnection!
+  toRelations(
+    after: String,
+    before: String,
+    first: Int,
+    last: Int,
+    orderBy: RelationOrder!,
+  ): RelationConnection!
+}
+
+type Relation implements Node {
+  from: Reference!
+  to: Reference!
+}
+
+type RelationEdge implements Edge {
+  cursor: String!
+  node: Relation!
+}
+
+type RelationConnection implements Connection {
+  edges: [RelationEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+input RelationOrder {
+  direction: OrderDirection!
+  field: RelationOrderField!
+}
+
+enum RelationOrderField {
+  TITLE
+}
+
+type Query {
+  reference(id: ID!): Reference!
+}
