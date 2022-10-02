@@ -6,15 +6,6 @@
     tag: BOOK
     isbn13: "9784781912851"
 
-- id: fae83103-432a-428f-b809-6331b41cb482
-  title: 論理と計算のしくみ
-  authors:
-    - id: 4dcb595a-c528-4f04-8fbc-3c481d9c0148
-    - id: 150c5c26-4f4b-4876-b74f-7d70b159b035
-  type:
-    tag: BOOK
-    isbn13: "9784000061919"
-
 - id: 42b21823-3e33-4c71-9cd1-36f0bc7ffda8
   title: プログラム意味論
   authors:
@@ -22,6 +13,30 @@
   type:
     tag: BOOK
     isbn13: "9784320026575"
+
+- id: 189a4fb2-a80a-41b4-9bff-b5e4e7ac1d6f
+  title: プログラム検証論
+  authors:
+    - id: 77f1a4ca-3ea4-44e8-98ce-a9cddf471edc
+  type:
+    tag: BOOK
+    isbn13: "9784320026582"
+
+- id: 53fedbd2-c358-40ae-8da6-b3a0103313c2
+  title: プログラミング言語の基礎理論
+  authors:
+    - id: 2925445e-8a98-4acf-ab5c-f5ef2fa4a915
+  type:
+    tag: BOOK
+    isbn13: "9784320026599"
+
+- id: a1c04346-5fb6-48bd-b5ac-1d218d4f97ac
+  title: 新装版 プログラミング言語の基礎理論
+  authors:
+    - id: 2925445e-8a98-4acf-ab5c-f5ef2fa4a915
+  type:
+    tag: BOOK
+    isbn13: "9784320124509"
 
 - id: cb6e5656-811c-46a8-ac15-54239df5ff3c
   title: 計算論 計算可能性とラムダ計算
@@ -31,6 +46,44 @@
     tag: BOOK
     isbn13: "9784764901841"
 
+- id: fae83103-432a-428f-b809-6331b41cb482
+  title: 論理と計算のしくみ
+  authors:
+    - id: 4dcb595a-c528-4f04-8fbc-3c481d9c0148
+    - id: 150c5c26-4f4b-4876-b74f-7d70b159b035
+  type:
+    tag: BOOK
+    isbn13: "9784000061919"
+
+- id: 981ecdfd-5b16-43bd-b0af-0b006e0ff981
+  title: 論理とプログラム意味論
+  authors:
+    - id: d78074dc-e666-444b-8557-9ef1d92c7999
+    - id: 2a4a0b6a-6355-450b-bef8-55957d696b29
+    - id: 42ca21cc-d7e5-4374-b057-8107a7ea7d4c
+  type:
+    tag: BOOK
+    isbn13: "9784000061902"
+
+- id: cd249629-5cd6-48ea-9581-7b216484a9ed
+  title: アルゴリズムとプログラミング言語
+  authors:
+    - id: 2925445e-8a98-4acf-ab5c-f5ef2fa4a915
+    - id: 66acb77e-44ca-45b1-9a72-1a9f17447c0a
+    - id: e257c17e-8978-403e-9c09-8b3df4812cb6
+  type:
+    tag: BOOK
+    isbn13: "9784000050067"
+
+- id: 689b4c40-cdd9-44c0-b26a-361ee0d07282
+  title: The Formal Semantics of Programming Languages
+  authors:
+    - id: f6448d9e-6635-4aaf-a311-1fcdccadb652
+  type:
+    tag: BOOK
+    isbn10: "0262731037"
+    isbn13: "9780262529433"
+
 - id: ef993db3-6df3-48f9-ab23-dc64e2ae8a87
   title: Types and Programming Languages
   authors:
@@ -38,6 +91,7 @@
   type:
     tag: BOOK
     isbn10: "0262162091"
+    isbn13: "9780262162098"
 
 - id: d1d43a80-a3ca-4338-bbb6-29aeb4f915bb
   title: 型システム入門 プログラミング言語と型の理論
@@ -78,3 +132,51 @@
   type:
     tag: BOOK
     isbn13: "9784627856417"
+
+- id: 35372996-3394-4dcb-9fdc-11564a63aa5d
+  title: 計算理論と数理論理学
+  authors:
+    - id: 837c0a94-e4d2-453e-94a7-e9930a59ff0b
+  type:
+    tag: BOOK
+    isbn13: "9784320114722"
+
+- id: db783a33-b2e6-4d72-a9e8-ca72f232711c
+  title: ゲーデルに挑む 証明不可能なことの証明
+  authors:
+    - id: 837c0a94-e4d2-453e-94a7-e9930a59ff0b
+  type:
+    tag: BOOK
+    isbn13: "9784130639002"
+
+- id: 5d9e2188-afee-4041-b279-a911d15dc676
+  title: ゲーデルと20世紀の論理学1 ゲーデルの20世紀
+  authors:
+    - id: 837c0a94-e4d2-453e-94a7-e9930a59ff0b
+  type:
+    tag: BOOK
+    isbn13: "9784130640954"
+
+- id: 7b6e5252-7312-4a37-b365-01cd30f6b6b2
+  title: ゲーデルと20世紀の論理学2 完全性定理とモデル理論
+  authors:
+    - id: 837c0a94-e4d2-453e-94a7-e9930a59ff0b
+  type:
+    tag: BOOK
+    isbn13: "9784130640961"
+
+- id: 893d6000-b27b-4302-946c-f398369ee56e
+  title: ゲーデルと20世紀の論理学3 不完全性定理と算術の体系
+  authors:
+    - id: 837c0a94-e4d2-453e-94a7-e9930a59ff0b
+  type:
+    tag: BOOK
+    isbn13: "9784130640978"
+
+- id: da5b8a62-f322-4e35-9d46-2f13b042fc8f
+  title: ゲーデルと20世紀の論理学4 集合論とプラトニズム
+  authors:
+    - id: 837c0a94-e4d2-453e-94a7-e9930a59ff0b
+  type:
+    tag: BOOK
+    isbn13: "9784130640985"

@@ -1,19 +1,41 @@
 # プログラミング言語の基礎概念
-- id: 9a899e4f-ab32-4aba-8464-1e8a26fdbe3e
-  from: 4e96602b-ebe2-4204-87f1-ddd6144b82e0
-  to: fae83103-432a-428f-b809-6331b41cb482
-  type:
-    tag: REFER
+## > プログラム意味論
 - id: 2d85d16c-bc23-4730-abb3-f597c3cb10c3
   from: 4e96602b-ebe2-4204-87f1-ddd6144b82e0
   to: 42b21823-3e33-4c71-9cd1-36f0bc7ffda8
   type:
     tag: REFER
-- id: 5750d6b0-8513-4f12-81cb-af793efd2903
+## > プログラム検証論
+- id: 6ad32316-fef5-4904-8a21-09ddd673319a
+  from: 4e96602b-ebe2-4204-87f1-ddd6144b82e0
+  to: 189a4fb2-a80a-41b4-9bff-b5e4e7ac1d6f
+  type:
+    tag: REFER
+## > プログラミング言語の基礎理論
+- id: d4b806f2-e5dc-4e9f-9ddf-b25584405dbe
+  from: 4e96602b-ebe2-4204-87f1-ddd6144b82e0
+  to: 53fedbd2-c358-40ae-8da6-b3a0103313c2
+  type:
+    tag: REFER
+## > 計算論 計算可能性とラムダ計算
+- id: cdb562fe-88a4-433d-9ece-2395ca90e540
   from: 4e96602b-ebe2-4204-87f1-ddd6144b82e0
   to: cb6e5656-811c-46a8-ac15-54239df5ff3c
   type:
     tag: REFER
+## > 論理と計算のしくみ
+- id: 9a899e4f-ab32-4aba-8464-1e8a26fdbe3e
+  from: 4e96602b-ebe2-4204-87f1-ddd6144b82e0
+  to: fae83103-432a-428f-b809-6331b41cb482
+  type:
+    tag: REFER
+## > The Formal Semantics of Programming Languages
+- id: d93fb267-312d-479d-b5e1-122bee93ce19
+  from: 4e96602b-ebe2-4204-87f1-ddd6144b82e0
+  to: 689b4c40-cdd9-44c0-b26a-361ee0d07282
+  type:
+    tag: REFER
+## > TaPL
 - id: 5750d6b0-8513-4f12-81cb-af793efd2903
   from: 4e96602b-ebe2-4204-87f1-ddd6144b82e0
   to: ef993db3-6df3-48f9-ab23-dc64e2ae8a87
@@ -47,9 +69,36 @@
     tag: REFER
 
 # TaPL(原著)
-- id: 5750d6b0-8513-4f12-81cb-af793efd2903
+- id: c0a8b313-d945-47df-b545-da472e111147
   from: ef993db3-6df3-48f9-ab23-dc64e2ae8a87
   to: d1d43a80-a3ca-4338-bbb6-29aeb4f915bb
   type:
     tag: TRANSLATE
     lang: ja
+
+# 計算理論と数理論理学
+- id: 50b343d8-fad2-4eb8-a24e-c4aebd42c571
+  from: 35372996-3394-4dcb-9fdc-11564a63aa5d
+  to: db783a33-b2e6-4d72-a9e8-ca72f232711c
+  type:
+    tag: REFER
+- id: 50b343d8-fad2-4eb8-a24e-c4aebd42c571
+  from: 35372996-3394-4dcb-9fdc-11564a63aa5d
+  to: 5d9e2188-afee-4041-b279-a911d15dc676
+  type:
+    tag: REFER
+- id: 50b343d8-fad2-4eb8-a24e-c4aebd42c571
+  from: 35372996-3394-4dcb-9fdc-11564a63aa5d
+  to: 7b6e5252-7312-4a37-b365-01cd30f6b6b2
+  type:
+    tag: REFER
+- id: 50b343d8-fad2-4eb8-a24e-c4aebd42c571
+  from: 35372996-3394-4dcb-9fdc-11564a63aa5d
+  to: 893d6000-b27b-4302-946c-f398369ee56e
+  type:
+    tag: REFER
+- id: 50b343d8-fad2-4eb8-a24e-c4aebd42c571
+  from: 35372996-3394-4dcb-9fdc-11564a63aa5d
+  to: da5b8a62-f322-4e35-9d46-2f13b042fc8f
+  type:
+    tag: REFER
