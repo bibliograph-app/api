@@ -10,8 +10,10 @@
         "jsonc",
         "md",
         "toml",
+        "yaml",
+        "typescript"
       ]
-    },
+    }
   ],
   "[nix]": {
     "editor.defaultFormatter": "jkillian.custom-local-formatters"
@@ -26,6 +28,12 @@
     "editor.defaultFormatter": "jkillian.custom-local-formatters"
   },
   "[toml]": {
+    "editor.defaultFormatter": "jkillian.custom-local-formatters"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "jkillian.custom-local-formatters"
+  },
+  "[typescript]": {
     "editor.defaultFormatter": "jkillian.custom-local-formatters"
   },
 }
