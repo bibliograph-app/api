@@ -6,6 +6,8 @@
 
   # dev
   inputs = {
+    yamlfmt.url = "github:SnO2WMaN/yamlfmt.nix";
+
     devshell.url = "github:numtide/devshell";
     flake-utils.url = "github:numtide/flake-utils";
     flake-compat = {
@@ -17,7 +19,6 @@
   outputs = {
     self,
     nixpkgs,
-    devshell,
     flake-utils,
     ...
   } @ inputs:
@@ -25,8 +26,11 @@
       system: let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [
+          overlays = with inputs; [
             devshell.overlay
+            (final: prev: {
+              yamlfmt = yamlfmt.packages.${system}.yamlfmt;
+            })
           ];
         };
       in {
@@ -34,6 +38,7 @@
           packages = with pkgs; [
             alejandra
             treefmt
+            yamlfmt
             dprint
           ];
           commands = [

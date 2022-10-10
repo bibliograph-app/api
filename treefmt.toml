@@ -2,6 +2,13 @@
 command = "alejandra"
 includes = ["*.nix"]
 
+[formatter.yamlfmt]
+command = "yamlfmt"
+includes = [
+  "*.yml",
+  "*.yaml",
+]
+
 [formatter.dprint]
 command = "dprint"
 options = ["fmt"]
