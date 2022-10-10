@@ -1,5 +1,5 @@
 ## Setup
 
 ```bash
-$ sampledata-loader --file=./sampledata/graph.yml
+$ sampledata-loader --triples="./sampledata/triples.yml" --mongoUri="mongodb://user:pass@127.0.0.1:27017/bookgraph?authSource=admin"
 ```
