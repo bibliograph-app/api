@@ -12,6 +12,8 @@ const triples = parse(
 ) as (
   | { from: string; to: string; rel: { label: "NAME" } }
   | { from: string; to: string; rel: { label: "AUTHOR" } }
+  | { from: string; to: string; rel: { label: "TITLE" } }
+  | { from: string; to: string; rel: { label: "REFERENCE" } }
 )[];
 const filteredTriples = triples
   .filter(({ rel, from, to }) => {
@@ -19,7 +21,13 @@ const filteredTriples = triples
       case "NAME":
         return (typeof from === "string" && !v4.validate(from)) &&
           (typeof to === "string" && v4.validate(to));
+      case "TITLE":
+        return (typeof from === "string" && !v4.validate(from)) &&
+          (typeof to === "string" && v4.validate(to));
       case "AUTHOR":
+        return (typeof from === "string" && v4.validate(from)) &&
+          (typeof to === "string" && v4.validate(to));
+      case "REFERENCE":
         return (typeof from === "string" && v4.validate(from)) &&
           (typeof to === "string" && v4.validate(to));
     }
