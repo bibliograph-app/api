@@ -17,3 +17,11 @@ includes = [
   "*.toml",
   "*.md",
 ]
+excludes = [
+  "sampledata/**/*.ts",
+]
+
+[formatter.deno-fmt]
+command = "deno"
+options = ["fmt"]
+includes = ["sampledata/**/*.ts"]

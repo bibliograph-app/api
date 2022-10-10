@@ -2,6 +2,8 @@
   # main
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    deno2nix.url = "github:SnO2WMaN/deno2nix";
   };
 
   # dev
@@ -28,6 +30,7 @@
           inherit system;
           overlays = with inputs; [
             devshell.overlay
+            deno2nix.overlays.default
             (final: prev: {
               yamlfmt = yamlfmt.packages.${system}.yamlfmt;
             })
@@ -40,6 +43,8 @@
             treefmt
             yamlfmt
             dprint
+            deno
+            (pkgs.callPackage ./sampledata {})
           ];
           commands = [
             {
