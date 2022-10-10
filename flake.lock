@@ -1,5 +1,20 @@
 {
   "nodes": {
+    "corepack": {
+      "locked": {
+        "lastModified": 1665305306,
+        "narHash": "sha256-KjFU4Ckgw/qRU+ZR8vhkgKlFsrNc0k7hlcxF+kxeHJk=",
+        "owner": "SnO2WMaN",
+        "repo": "corepack-flake",
+        "rev": "33246606a39b74580c80bf3226e9434e6a65a7ed",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SnO2WMaN",
+        "repo": "corepack-flake",
+        "type": "github"
+      }
+    },
     "deno2nix": {
       "inputs": {
         "devshell": "devshell",
@@ -349,6 +364,7 @@
     },
     "root": {
       "inputs": {
+        "corepack": "corepack",
         "deno2nix": "deno2nix",
         "devshell": "devshell_2",
         "flake-compat": "flake-compat_2",

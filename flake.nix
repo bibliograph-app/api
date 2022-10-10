@@ -2,8 +2,8 @@
   # main
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-
     deno2nix.url = "github:SnO2WMaN/deno2nix";
+    corepack.url = "github:SnO2WMaN/corepack-flake";
   };
 
   # dev
@@ -31,6 +31,7 @@
           overlays = with inputs; [
             devshell.overlay
             deno2nix.overlays.default
+            corepack.overlays.default
             (final: prev: {
               yamlfmt = yamlfmt.packages.${system}.yamlfmt;
             })
@@ -45,6 +46,11 @@
             dprint
             deno
             (pkgs.callPackage ./sampledata {})
+            nodejs
+            (mkCorepack {
+              nodejs = nodejs;
+              pm = "pnpm";
+            })
           ];
           commands = [
             {

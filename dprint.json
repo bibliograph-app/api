@@ -11,7 +11,8 @@
     "**/*.{toml}"
   ],
   "excludes": [
-    "**/*-lock.json"
+    "**/*-lock.json",
+    "src/graphql.types.ts"
   ],
   "plugins": [
     "https://plugins.dprint.dev/json-0.15.6.wasm",
