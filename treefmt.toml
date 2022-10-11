@@ -8,6 +8,9 @@ includes = [
   "*.yml",
   "*.yaml",
 ]
+excludes = [
+  "pnpm-lock.yaml",
+]
 
 [formatter.dprint]
 command = "dprint"
@@ -16,6 +19,7 @@ includes = [
   "*.json",
   "*.toml",
   "*.md",
+  "*.ts",
 ]
 excludes = [
   "sampledata/**/*.ts",
