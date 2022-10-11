@@ -7,8 +7,12 @@
   to: "4e96602b-ebe2-4204-87f1-ddd6144b82e0"
   rel:
     label: TITLE
-- from: "94bb6b4b-bb8b-4369-bafd-95a9639971c3"
-  to: "4e96602b-ebe2-4204-87f1-ddd6144b82e0"
+- to: "4e96602b-ebe2-4204-87f1-ddd6144b82e0"
+  from: "9784781912851"
+  rel:
+    label: ISBN13
+- to: "94bb6b4b-bb8b-4369-bafd-95a9639971c3"
+  from: "4e96602b-ebe2-4204-87f1-ddd6144b82e0"
   rel:
     label: AUTHOR
 - from: "4e96602b-ebe2-4204-87f1-ddd6144b82e0"
@@ -56,8 +60,12 @@
   to: "42b21823-3e33-4c71-9cd1-36f0bc7ffda8"
   rel:
     label: TITLE
-- from: "b18e13d2-e98d-4932-b200-6e30b8fd3fd3"
-  to: "42b21823-3e33-4c71-9cd1-36f0bc7ffda8"
+- to: "42b21823-3e33-4c71-9cd1-36f0bc7ffda8"
+  from: "9784320026575"
+  rel:
+    label: ISBN13
+- to: "b18e13d2-e98d-4932-b200-6e30b8fd3fd3"
+  from: "42b21823-3e33-4c71-9cd1-36f0bc7ffda8"
   rel:
     label: AUTHOR
 # プログラム検証論
@@ -69,8 +77,12 @@
   to: "d14340d1-137a-4d25-8a45-bb591ae23fe6"
   rel:
     label: TITLE
-- from: "77f1a4ca-3ea4-44e8-98ce-a9cddf471edc"
-  to: "d14340d1-137a-4d25-8a45-bb591ae23fe6"
+- to: "d14340d1-137a-4d25-8a45-bb591ae23fe6"
+  from: "9784320026582"
+  rel:
+    label: ISBN13
+- to: "77f1a4ca-3ea4-44e8-98ce-a9cddf471edc"
+  from: "d14340d1-137a-4d25-8a45-bb591ae23fe6"
   rel:
     label: AUTHOR
 # プログラミング言語の基礎理論
@@ -82,8 +94,12 @@
   to: "d1f014b0-cd04-426e-ae69-38b363952f44"
   rel:
     label: TITLE
-- from: "2925445e-8a98-4acf-ab5c-f5ef2fa4a915"
-  to: "d1f014b0-cd04-426e-ae69-38b363952f44"
+- to: "d1f014b0-cd04-426e-ae69-38b363952f44"
+  from: "9784320026599"
+  rel:
+    label: ISBN13
+- to: "2925445e-8a98-4acf-ab5c-f5ef2fa4a915"
+  from: "d1f014b0-cd04-426e-ae69-38b363952f44"
   rel:
     label: AUTHOR
 # 計算論 計算可能性とラムダ計算
@@ -95,8 +111,12 @@
   to: "25645512-4d28-4f71-9a4d-f44fc8330253"
   rel:
     label: TITLE
-- from: "a3af7f1b-d5d2-4147-b7c1-104f00a9985d"
-  to: "25645512-4d28-4f71-9a4d-f44fc8330253"
+- to: "25645512-4d28-4f71-9a4d-f44fc8330253"
+  from: "9784764901841"
+  rel:
+    label: ISBN13
+- to: "a3af7f1b-d5d2-4147-b7c1-104f00a9985d"
+  from: "25645512-4d28-4f71-9a4d-f44fc8330253"
   rel:
     label: AUTHOR
 # 論理と計算のしくみ
@@ -112,12 +132,16 @@
   to: "fae83103-432a-428f-b809-6331b41cb482"
   rel:
     label: TITLE
-- from: "4dcb595a-c528-4f04-8fbc-3c481d9c0148"
-  to: "fae83103-432a-428f-b809-6331b41cb482"
+- to: "fae83103-432a-428f-b809-6331b41cb482"
+  from: "9784000061919"
+  rel:
+    label: ISBN13
+- to: "4dcb595a-c528-4f04-8fbc-3c481d9c0148"
+  from: "fae83103-432a-428f-b809-6331b41cb482"
   rel:
     label: AUTHOR
-- from: "150c5c26-4f4b-4876-b74f-7d70b159b035"
-  to: "fae83103-432a-428f-b809-6331b41cb482"
+- to: "150c5c26-4f4b-4876-b74f-7d70b159b035"
+  from: "fae83103-432a-428f-b809-6331b41cb482"
   rel:
     label: AUTHOR
 # 論理とプログラム意味論
@@ -137,16 +161,20 @@
   to: "5939a50c-4ded-4bd1-a5a1-2649dd09f00b"
   rel:
     label: TITLE
-- from: "d78074dc-e666-444b-8557-9ef1d92c7999"
-  to: "5939a50c-4ded-4bd1-a5a1-2649dd09f00b"
+- to: "5939a50c-4ded-4bd1-a5a1-2649dd09f00b"
+  from: "9784000061902"
+  rel:
+    label: ISBN13
+- to: "d78074dc-e666-444b-8557-9ef1d92c7999"
+  from: "5939a50c-4ded-4bd1-a5a1-2649dd09f00b"
   rel:
     label: AUTHOR
-- from: "2a4a0b6a-6355-450b-bef8-55957d696b29"
-  to: "5939a50c-4ded-4bd1-a5a1-2649dd09f00b"
+- to: "2a4a0b6a-6355-450b-bef8-55957d696b29"
+  from: "5939a50c-4ded-4bd1-a5a1-2649dd09f00b"
   rel:
     label: AUTHOR
-- from: "42ca21cc-d7e5-4374-b057-8107a7ea7d4c"
-  to: "5939a50c-4ded-4bd1-a5a1-2649dd09f00b"
+- to: "42ca21cc-d7e5-4374-b057-8107a7ea7d4c"
+  from: "5939a50c-4ded-4bd1-a5a1-2649dd09f00b"
   rel:
     label: AUTHOR
 # アルゴリズムとプログラミング言語
@@ -162,16 +190,20 @@
   to: "245d1c3d-312d-49df-a21f-e25c2ffad527"
   rel:
     label: TITLE
-- from: "2925445e-8a98-4acf-ab5c-f5ef2fa4a915"
-  to: "245d1c3d-312d-49df-a21f-e25c2ffad527"
+- to: "245d1c3d-312d-49df-a21f-e25c2ffad527"
+  from: "9784000050067"
+  rel:
+    label: ISBN13
+- to: "2925445e-8a98-4acf-ab5c-f5ef2fa4a915"
+  from: "245d1c3d-312d-49df-a21f-e25c2ffad527"
   rel:
     label: AUTHOR
-- from: "66acb77e-44ca-45b1-9a72-1a9f17447c0a"
-  to: "245d1c3d-312d-49df-a21f-e25c2ffad527"
+- to: "66acb77e-44ca-45b1-9a72-1a9f17447c0a"
+  from: "245d1c3d-312d-49df-a21f-e25c2ffad527"
   rel:
     label: AUTHOR
-- from: "e257c17e-8978-403e-9c09-8b3df4812cb6"
-  to: "245d1c3d-312d-49df-a21f-e25c2ffad527"
+- to: "e257c17e-8978-403e-9c09-8b3df4812cb6"
+  from: "245d1c3d-312d-49df-a21f-e25c2ffad527"
   rel:
     label: AUTHOR
 # The Formal Semantics of Programming Languages
@@ -183,8 +215,12 @@
   to: "ddbc191c-6724-4c07-ae0c-7f54ed4788e2"
   rel:
     label: TITLE
-- from: "f6448d9e-6635-4aaf-a311-1fcdccadb652"
-  to: "ddbc191c-6724-4c07-ae0c-7f54ed4788e2"
+- to: "ddbc191c-6724-4c07-ae0c-7f54ed4788e2"
+  from: "9780262529433"
+  rel:
+    label: ISBN13
+- to: "f6448d9e-6635-4aaf-a311-1fcdccadb652"
+  from: "ddbc191c-6724-4c07-ae0c-7f54ed4788e2"
   rel:
     label: AUTHOR
 # TaPL(原著)
@@ -196,8 +232,12 @@
   to: "be13b145-a427-4adc-be84-b737165a4724"
   rel:
     label: TITLE
-- from: "cdbf20c4-2c03-49bd-819d-16873e199528"
-  to: "be13b145-a427-4adc-be84-b737165a4724"
+- to: "be13b145-a427-4adc-be84-b737165a4724"
+  from: "9780262162098"
+  rel:
+    label: ISBN13
+- to: "cdbf20c4-2c03-49bd-819d-16873e199528"
+  from: "be13b145-a427-4adc-be84-b737165a4724"
   rel:
     label: AUTHOR
 # TaPL(日本語訳)
@@ -237,40 +277,44 @@
   to: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: TITLE
-- from: "e5515c70-7ec0-4cc1-8821-2e0ea0c3a475"
-  to: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
+- to: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
+  from: "9784274069116"
+  rel:
+    label: ISBN13
+- to: "e5515c70-7ec0-4cc1-8821-2e0ea0c3a475"
+  from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
-- from: "e5515c70-7ec0-4cc1-8821-2e0ea0c3a475"
-  to: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
+- to: "e5515c70-7ec0-4cc1-8821-2e0ea0c3a475"
+  from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
-- from: "5fb48a11-c8d8-47c6-82a9-a036fd005f90"
-  to: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
+- to: "5fb48a11-c8d8-47c6-82a9-a036fd005f90"
+  from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
-- from: "069e13b4-45d8-497d-8b7f-f0635ee27ff1"
-  to: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
+- to: "069e13b4-45d8-497d-8b7f-f0635ee27ff1"
+  from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
-- from: "b8c9706c-ff03-46a4-849b-e438090346f9"
-  to: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
+- to: "b8c9706c-ff03-46a4-849b-e438090346f9"
+  from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
-- from: "c5d3f669-72af-419e-a03e-35a76cc23341"
-  to: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
+- to: "c5d3f669-72af-419e-a03e-35a76cc23341"
+  from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
-- from: "ee096d54-e81e-4452-9204-dede1c081bb4"
-  to: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
+- to: "ee096d54-e81e-4452-9204-dede1c081bb4"
+  from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
-- from: "ba40fccb-e174-438f-a333-bc391af7a502"
-  to: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
+- to: "ba40fccb-e174-438f-a333-bc391af7a502"
+  from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
-- from: "0ab18404-60b7-45bf-9467-82543ea8e8e5"
-  to: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
+- to: "0ab18404-60b7-45bf-9467-82543ea8e8e5"
+  from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
 #　数理論理学(戸次)
@@ -282,10 +326,18 @@
   to: "9922d80a-e433-4773-8a7b-8ff19f8a9256"
   rel:
     label: TITLE
-- from: "88929cd4-ae21-4ed0-ba7b-3dba07c53ccc"
-  to: "9922d80a-e433-4773-8a7b-8ff19f8a9256"
+- to: "9922d80a-e433-4773-8a7b-8ff19f8a9256"
+  from: "9784130629157"
+  rel:
+    label: ISBN13
+- to: "88929cd4-ae21-4ed0-ba7b-3dba07c53ccc"
+  from: "9922d80a-e433-4773-8a7b-8ff19f8a9256"
   rel:
     label: AUTHOR
+- from: "9922d80a-e433-4773-8a7b-8ff19f8a9256"
+  to: "fae83103-432a-428f-b809-6331b41cb482"
+  rel:
+    label: REFERENCE
 # 論理学をつくる
 - from: "戸田山　和久"
   to: "2b209ee4-6f60-4cb7-a4e5-2e88b9b6b35c"
@@ -295,8 +347,12 @@
   to: "99d0fd9c-33ee-4c16-98b0-9eda6beab65b"
   rel:
     label: TITLE
-- from: "2b209ee4-6f60-4cb7-a4e5-2e88b9b6b35c"
-  to: "99d0fd9c-33ee-4c16-98b0-9eda6beab65b"
+- to: "99d0fd9c-33ee-4c16-98b0-9eda6beab65b"
+  from: "9784815803902"
+  rel:
+    label: ISBN13
+- to: "2b209ee4-6f60-4cb7-a4e5-2e88b9b6b35c"
+  from: "99d0fd9c-33ee-4c16-98b0-9eda6beab65b"
   rel:
     label: AUTHOR
 # コンピュータサイエンスにおける様相論理
@@ -308,8 +364,12 @@
   to: "e54b5c69-2799-4538-b759-71b31e49250e"
   rel:
     label: TITLE
-- from: "910f14a3-8ced-40b3-8fc2-7e8c9267ad7b"
-  to: "e54b5c69-2799-4538-b759-71b31e49250e"
+- to: "e54b5c69-2799-4538-b759-71b31e49250e"
+  from: "9784627856417"
+  rel:
+    label: ISBN13
+- to: "910f14a3-8ced-40b3-8fc2-7e8c9267ad7b"
+  from: "e54b5c69-2799-4538-b759-71b31e49250e"
   rel:
     label: AUTHOR
 - from: "e54b5c69-2799-4538-b759-71b31e49250e"
@@ -325,47 +385,71 @@
   to: "4522c555-c9f5-4dcf-bffb-1750435f3a9a"
   rel:
     label: TITLE
-- from: "837c0a94-e4d2-453e-94a7-e9930a59ff0b"
-  to: "4522c555-c9f5-4dcf-bffb-1750435f3a9a"
+- to: "4522c555-c9f5-4dcf-bffb-1750435f3a9a"
+  from: "9784320114722"
+  rel:
+    label: ISBN13
+- to: "837c0a94-e4d2-453e-94a7-e9930a59ff0b"
+  from: "4522c555-c9f5-4dcf-bffb-1750435f3a9a"
   rel:
     label: AUTHOR
 - from: "ゲーデルに挑む 証明不可能なことの証明"
   to: "39c72f15-1add-49e2-8cb2-ebc20cb65084"
   rel:
     label: TITLE
-- from: "837c0a94-e4d2-453e-94a7-e9930a59ff0b"
-  to: "39c72f15-1add-49e2-8cb2-ebc20cb65084"
+- to: "39c72f15-1add-49e2-8cb2-ebc20cb65084"
+  from: "9784130639002"
+  rel:
+    label: ISBN13
+- to: "837c0a94-e4d2-453e-94a7-e9930a59ff0b"
+  from: "39c72f15-1add-49e2-8cb2-ebc20cb65084"
   rel:
     label: AUTHOR
 - from: "ゲーデルと20世紀の論理学1 ゲーデルの20世紀"
   to: "cb1928bb-a83a-4cc4-89ad-a5fc6da5bd18"
   rel:
     label: TITLE
-- from: "837c0a94-e4d2-453e-94a7-e9930a59ff0b"
-  to: "cb1928bb-a83a-4cc4-89ad-a5fc6da5bd18"
+- to: "cb1928bb-a83a-4cc4-89ad-a5fc6da5bd18"
+  from: "9784130640954"
+  rel:
+    label: ISBN13
+- to: "837c0a94-e4d2-453e-94a7-e9930a59ff0b"
+  from: "cb1928bb-a83a-4cc4-89ad-a5fc6da5bd18"
   rel:
     label: AUTHOR
 - from: "ゲーデルと20世紀の論理学2 完全性定理とモデル理論"
   to: "aea3a148-2afe-4c45-abb1-eb2a5293a56a"
   rel:
     label: TITLE
-- from: "837c0a94-e4d2-453e-94a7-e9930a59ff0b"
-  to: "aea3a148-2afe-4c45-abb1-eb2a5293a56a"
+- to: "aea3a148-2afe-4c45-abb1-eb2a5293a56a"
+  from: "9784130640961"
+  rel:
+    label: ISBN13
+- to: "837c0a94-e4d2-453e-94a7-e9930a59ff0b"
+  from: "aea3a148-2afe-4c45-abb1-eb2a5293a56a"
   rel:
     label: AUTHOR
 - from: "ゲーデルと20世紀の論理学3 不完全性定理と算術の体系"
   to: "c5e56d23-492a-436d-bfd9-4d5cb79058c9"
   rel:
     label: TITLE
-- from: "837c0a94-e4d2-453e-94a7-e9930a59ff0b"
-  to: "c5e56d23-492a-436d-bfd9-4d5cb79058c9"
+- to: "c5e56d23-492a-436d-bfd9-4d5cb79058c9"
+  from: "9784130640978"
+  rel:
+    label: ISBN13
+- to: "837c0a94-e4d2-453e-94a7-e9930a59ff0b"
+  from: "c5e56d23-492a-436d-bfd9-4d5cb79058c9"
   rel:
     label: AUTHOR
 - from: "ゲーデルと20世紀の論理学4 集合論とプラトニズム"
   to: "de98122b-b8cc-47fc-a58c-f215e3adb9f7"
   rel:
     label: TITLE
-- from: "837c0a94-e4d2-453e-94a7-e9930a59ff0b"
-  to: "de98122b-b8cc-47fc-a58c-f215e3adb9f7"
+- to: "de98122b-b8cc-47fc-a58c-f215e3adb9f7"
+  from: "9784130640985"
+  rel:
+    label: ISBN13
+- to: "837c0a94-e4d2-453e-94a7-e9930a59ff0b"
+  from: "de98122b-b8cc-47fc-a58c-f215e3adb9f7"
   rel:
     label: AUTHOR

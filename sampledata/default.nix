@@ -4,7 +4,7 @@
   ...
 }:
 deno2nix.mkExecutable {
-  pname = "loader.ts";
+  pname = "sampledata-loader";
   version = "0.1.0";
 
   src = ./.;
