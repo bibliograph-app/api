@@ -1,6 +1,15 @@
+type Reference {
+  material: Material!
+}
+
 type Material {
   id: ID!
   title: String!
+
+  references(
+    skip: Int! = 0
+    limit: Int! = 10
+  ): [Reference!]!
 }
 
 type Query {

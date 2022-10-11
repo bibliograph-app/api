@@ -1,3 +1,3 @@
 import { Material } from "~/graphql.types";
 
-export type MaterialDto = Material;
+export type MaterialDto = Omit<Material, "references">;

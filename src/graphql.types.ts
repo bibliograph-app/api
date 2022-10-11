@@ -18,9 +18,14 @@ export interface IQuery {
     material(id: string): Material | Promise<Material>;
 }
 
+export interface Reference {
+    material: Material;
+}
+
 export interface Material {
     id: string;
     title: string;
+    references: Reference[];
 }
 
 type Nullable<T> = T | null;

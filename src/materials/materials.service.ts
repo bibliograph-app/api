@@ -34,4 +34,60 @@ export class MaterialsService {
       title: material.title,
     };
   }
+
+  async getReferencesById(
+    id: string,
+    { skip, limit }: { skip: number; limit: number },
+  ): Promise<
+    {
+      material: { id: string; title: string };
+    }[]
+  > {
+    const references = await this.materialsModel
+      .aggregate<
+        {
+          material: {
+            id: string;
+            title: string;
+          };
+        }
+      >([
+        {
+          $match: { uuid: id },
+        },
+        {
+          $lookup: {
+            from: "materials",
+            localField: "references.id",
+            foreignField: "_id",
+            as: "references",
+          },
+        },
+        {
+          $unwind: {
+            path: "$references",
+          },
+        },
+        {
+          $project: {
+            "_id": 0,
+            "material.id": "$references.uuid",
+            "material.title": "$references.title",
+          },
+        },
+        {
+          $sort: {
+            "material.title": 1,
+          },
+        },
+        {
+          $limit: limit,
+        },
+        {
+          $skip: skip,
+        },
+      ]);
+
+    return references;
+  }
 }

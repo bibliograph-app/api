@@ -1,5 +1,5 @@
-import { Inject, NotFoundException } from "@nestjs/common";
-import { Args, Query, Resolver } from "@nestjs/graphql";
+import { BadRequestException, Inject, NotFoundException } from "@nestjs/common";
+import { Args, Parent, Query, ResolveField, Resolver } from "@nestjs/graphql";
 
 import { MaterialDto } from "./materials.dto";
 import { MaterialsService } from "./materials.service";
@@ -17,5 +17,19 @@ export class MaterialsResolver {
     if (!material) throw new NotFoundException(`Material not found. (id: ${id})`, "?");
 
     return material;
+  }
+
+  @ResolveField("references")
+  async getReferences(
+    @Parent() parent: MaterialDto,
+    @Args("skip") skip: number,
+    @Args("limit") limit: number,
+  ): Promise<
+    { material: { id: string; title: string } }[]
+  > {
+    if (skip < 0) throw new BadRequestException(`Arg "skip" must be >= 0 (skip: ${skip})`);
+    if (limit <= 0) throw new BadRequestException(`Arg "limit" must be > 0 (limit: ${limit})`);
+
+    return this.materials.getReferencesById(parent.id, { skip, limit });
   }
 }
