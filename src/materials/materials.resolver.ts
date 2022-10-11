@@ -1,4 +1,4 @@
-import { Inject } from "@nestjs/common";
+import { Inject, NotFoundException } from "@nestjs/common";
 import { Args, Query, Resolver } from "@nestjs/graphql";
 
 import { MaterialDto } from "./materials.dto";
@@ -13,19 +13,9 @@ export class MaterialsResolver {
 
   @Query("material")
   async getMaterial(@Args("id") id: string): Promise<MaterialDto> {
-    return {
-      id,
-      title: "?",
-    };
+    const material = await this.materials.getMaterialById(id);
+    if (!material) throw new NotFoundException(`Material not found. (id: ${id})`, "?");
 
-    /*
-    const res = await this.feeds.getAuthorById(id);
-    if (!res) throw new NotFoundException(`Author ${id} not found`);
-
-    return {
-      id: res.id,
-      name: "?",
-    };
-    */
+    return material;
   }
 }
