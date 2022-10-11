@@ -38,6 +38,10 @@
           ];
         };
       in {
+        apps.sampledata = flake-utils.lib.mkApp {
+          drv = pkgs.callPackage ./sampledata {};
+        };
+
         devShells.default = pkgs.devshell.mkShell {
           packages = with pkgs; [
             alejandra
@@ -45,7 +49,6 @@
             yamlfmt
             dprint
             deno
-            (pkgs.callPackage ./sampledata {})
             nodejs
             (mkCorepack {
               nodejs = nodejs;
