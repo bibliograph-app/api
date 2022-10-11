@@ -22,10 +22,15 @@ export interface Reference {
     material: Material;
 }
 
+export interface Authorship {
+    author: Author;
+}
+
 export interface Material {
     id: string;
     title: string;
     isbn13?: Nullable<string>;
+    authorships: Authorship[];
     references: Reference[];
 }
 
