@@ -1,0 +1,8 @@
+type Material {
+  id: ID!
+  title: String!
+}
+
+type Query {
+  material(id: ID!): Material!
+}
