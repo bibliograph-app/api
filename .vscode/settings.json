@@ -1,6 +1,17 @@
 {
   "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix",
-  "vscode-dhall-lsp-server.executable": "dhall-lsp-server",
+
+  "deno.enablePaths": ["./sampledata"],
+  "deno.lint": true,
+  "deno.unstable": true,
+  "deno.importMap": "./sampledata/import_map.json",
+  "deno.internalDebug": true,
+
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": true
+  },
+
   "customLocalFormatters.formatters": [
     {
       "command": "treefmt -q --stdin ${file}",
@@ -35,5 +46,5 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "jkillian.custom-local-formatters"
-  },
+  }
 }
