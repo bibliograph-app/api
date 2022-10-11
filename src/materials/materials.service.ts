@@ -13,18 +13,19 @@ export class MaterialsService {
 
   async getMaterialById(id: string): Promise<
     | null
-    | { id: string; title: string }
+    | { id: string; title: string; isbn13: string | null }
   > {
     const material = await this.materialsModel
       .findOne(
         { uuid: id },
-        { uuid: "$uuid", title: "$title" },
+        { uuid: "$uuid", title: "$title", isbn13: "$isbn13" },
       )
       .exec()
       .then((v) =>
         v?.toJSON<{
           uuid: string;
           title: string;
+          isbn13?: string;
         }>()
       );
     if (!material) return null;
@@ -32,6 +33,7 @@ export class MaterialsService {
     return {
       id: material.uuid,
       title: material.title,
+      isbn13: material.isbn13 || null,
     };
   }
 
@@ -73,6 +75,7 @@ export class MaterialsService {
             "_id": 0,
             "material.id": "$references.uuid",
             "material.title": "$references.title",
+            "material.isbn13": "$references.isbn13",
           },
         },
         {

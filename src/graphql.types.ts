@@ -25,6 +25,7 @@ export interface Reference {
 export interface Material {
     id: string;
     title: string;
+    isbn13?: Nullable<string>;
     references: Reference[];
 }
 

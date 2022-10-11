@@ -5,6 +5,7 @@ type Reference {
 type Material {
   id: ID!
   title: String!
+  isbn13: String
 
   references(
     skip: Int! = 0
