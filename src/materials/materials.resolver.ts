@@ -20,16 +20,41 @@ export class MaterialsResolver {
   }
 
   @ResolveField("references")
-  async getReferences(
+  async resolveReferences(
     @Parent() parent: MaterialDto,
     @Args("skip") skip: number,
     @Args("limit") limit: number,
   ): Promise<
     { material: { id: string; title: string } }[]
   > {
-    if (skip < 0) throw new BadRequestException(`Arg "skip" must be >= 0 (skip: ${skip})`);
-    if (limit <= 0) throw new BadRequestException(`Arg "limit" must be > 0 (limit: ${limit})`);
+    if (skip < 0) {
+      throw new BadRequestException(
+        `Arg \`skip\` in \`Material.references\` must be >= 0 (skip: ${skip})`,
+      );
+    }
+    if (limit <= 0) {
+      throw new BadRequestException(
+        `Arg \`limit\` in \`Material.references\` must be > 0 (limit: ${limit})`,
+      );
+    }
 
     return this.materials.getReferencesById(parent.id, { skip, limit });
+  }
+
+  @ResolveField("authorships")
+  async resolveAuthorships(
+    @Parent() parent: MaterialDto,
+    @Args("limit") limit?: number,
+  ): Promise<{
+    author: { id: string; names: { name: string }[] };
+    roles: string[];
+  }[]> {
+    if (limit && limit <= 0) {
+      throw new BadRequestException(
+        `Arg \`limit\` in \`Material.authorship\` must be > 0 if specified (limit: ${limit})`,
+      );
+    }
+
+    return this.materials.getAuthorshipsById(parent.id, { limit: limit || null });
   }
 }

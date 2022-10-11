@@ -2,10 +2,18 @@ type Reference {
   material: Material!
 }
 
+type Authorship {
+  author: Author!
+}
+
 type Material {
   id: ID!
   title: String!
   isbn13: String
+
+  authorships(
+    limit: Int
+  ): [Authorship!]!
 
   references(
     skip: Int! = 0

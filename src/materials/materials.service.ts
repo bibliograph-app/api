@@ -93,4 +93,55 @@ export class MaterialsService {
 
     return references;
   }
+
+  async getAuthorshipsById(
+    id: string,
+    { limit }: { limit: number | null },
+  ): Promise<
+    {
+      author: { id: string; names: { name: string }[] };
+      roles: string[];
+    }[]
+  > {
+    const references = await this.materialsModel
+      .aggregate<
+        {
+          author: { id: string; names: { name: string }[] };
+          roles: string[];
+        }
+      >([
+        {
+          $match: { uuid: id },
+        },
+        {
+          $unwind: {
+            path: "$authorships",
+          },
+        },
+        {
+          $lookup: {
+            from: "authors",
+            localField: "authorships.id",
+            foreignField: "_id",
+            as: "authorships.author",
+          },
+        },
+        {
+          $unwind: {
+            path: "$authorships.author",
+          },
+        },
+        {
+          $project: {
+            "_id": 0,
+            "author.id": "$authorships.author.uuid",
+            "author.names": "$authorships.author.names",
+            "roles": "$authorships.roles",
+          },
+        },
+        ...limit ? [{ $limit: limit }] : [],
+      ]);
+
+    return references;
+  }
 }
