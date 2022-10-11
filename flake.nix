@@ -58,6 +58,12 @@
               category = "formatter";
             }
           ];
+          env = [
+            {
+              name = "PATH";
+              eval = "$PATH:$PRJ_ROOT/node_modules/.bin";
+            }
+          ];
         };
       }
     );
