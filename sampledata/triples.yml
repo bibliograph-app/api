@@ -68,6 +68,10 @@
   from: "42b21823-3e33-4c71-9cd1-36f0bc7ffda8"
   rel:
     label: AUTHOR
+- from: "42b21823-3e33-4c71-9cd1-36f0bc7ffda8"
+  to: "25645512-4d28-4f71-9a4d-f44fc8330253"
+  rel:
+    label: REFERENCE
 # プログラム検証論
 - from: "林　晋"
   to: "77f1a4ca-3ea4-44e8-98ce-a9cddf471edc"
@@ -281,42 +285,71 @@
   from: "9784274069116"
   rel:
     label: ISBN13
+- from: "be13b145-a427-4adc-be84-b737165a4724"
+  to: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
+  rel:
+    label: "TRANSLATE"
+    lang: "ja"
+- to: "cdbf20c4-2c03-49bd-819d-16873e199528"
+  from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
+  rel:
+    label: AUTHOR
+    roles:
+      - "ORIGINAL_AUTHOR"
 - to: "e5515c70-7ec0-4cc1-8821-2e0ea0c3a475"
   from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
+    roles:
+      - "TRANSLATOR"
 - to: "e5515c70-7ec0-4cc1-8821-2e0ea0c3a475"
   from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
+    roles:
+      - "TRANSLATOR"
 - to: "5fb48a11-c8d8-47c6-82a9-a036fd005f90"
   from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
+    roles:
+      - "TRANSLATOR"
 - to: "069e13b4-45d8-497d-8b7f-f0635ee27ff1"
   from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
+    roles:
+      - "TRANSLATOR"
 - to: "b8c9706c-ff03-46a4-849b-e438090346f9"
   from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
+    roles:
+      - "TRANSLATOR"
 - to: "c5d3f669-72af-419e-a03e-35a76cc23341"
   from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
+    roles:
+      - "TRANSLATOR"
 - to: "ee096d54-e81e-4452-9204-dede1c081bb4"
   from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
+    roles:
+      - "TRANSLATOR"
 - to: "ba40fccb-e174-438f-a333-bc391af7a502"
   from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
+    roles:
+      - "TRANSLATOR"
 - to: "0ab18404-60b7-45bf-9467-82543ea8e8e5"
   from: "1cce6e64-16f9-4da2-8cbf-918689f2e577"
   rel:
     label: AUTHOR
+    roles:
+      - "TRANSLATOR"
 #　数理論理学(戸次)
 - from: "戸次　大介"
   to: "88929cd4-ae21-4ed0-ba7b-3dba07c53ccc"

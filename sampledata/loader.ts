@@ -2,20 +2,46 @@ import { MongoClient } from "mongo/mod.ts";
 import { parse } from "std/encoding/yaml.ts";
 import { parse as parseArgs } from "std/flags/mod.ts";
 import { resolve } from "std/path/mod.ts";
-import { v4 } from "std/uuid/mod.ts";
 
 const parsedArgs = parseArgs(Deno.args);
 const triplesYmlPath = resolve(Deno.cwd(), parsedArgs.triples);
 const triplesYml = await Deno.readTextFile(triplesYmlPath);
+
+type PredName = { from: string; to: string; rel: { label: "NAME" } };
+type PredAuthor = {
+  from: string;
+  to: string;
+  rel: { label: "AUTHOR"; roles?: string[] };
+};
+type PredTitle = { from: string; to: string; rel: { label: "TITLE" } };
+type PredISBN13 = { from: string; to: string; rel: { label: "ISBN13" } };
+type PredReference = {
+  from: string;
+  to: string;
+  rel: {
+    label: "REFERENCE";
+  };
+};
+type PredTranslate = {
+  from: string;
+  to: string;
+  rel: {
+    label: "TRANSLATE";
+    lang: string;
+  };
+};
+
 const triples = parse(
   triplesYml,
 ) as (
-  | { from: string; to: string; rel: { label: "NAME" } }
-  | { from: string; to: string; rel: { label: "AUTHOR" } }
-  | { from: string; to: string; rel: { label: "TITLE" } }
-  | { from: string; to: string; rel: { label: "REFERENCE" } }
-  | { from: string; to: string; rel: { label: "ISBN13" } }
+  | PredName
+  | PredAuthor
+  | PredTitle
+  | PredISBN13
+  | PredReference
+  | PredTranslate
 )[];
+/*
 const filteredTriples = triples
   .filter(({ rel, from, to }) => {
     switch (rel.label) {
@@ -34,6 +60,7 @@ const filteredTriples = triples
     }
   })
   .map(({ from, to, rel }) => ({ from, to, rel }));
+*/
 
 const mc = new MongoClient();
 await mc.connect(
@@ -42,9 +69,11 @@ await mc.connect(
 );
 const db = mc.database();
 
+/*
 const collTriple = db.collection("triples");
 await collTriple.deleteMany({});
 await collTriple.insertMany(filteredTriples);
+*/
 
 const collAuthors = db.collection("authors");
 const collMaterials = db.collection("materials");
@@ -85,25 +114,47 @@ await Promise.all(
   ),
 );
 await Promise.all(
-  triples.filter(({ rel }) => rel.label === "AUTHOR").map(
+  triples
+    .filter((v): v is PredAuthor => v.rel.label === "AUTHOR")
+    .map(
+      async ({ from, to, rel }) => {
+        const author = await collAuthors.findOne({ uuid: to });
+        if (!author) return;
+        await collMaterials.updateOne(
+          { uuid: from },
+          {
+            $addToSet: {
+              authorships: { id: author._id, roles: rel.roles || [] },
+            },
+          },
+        );
+      },
+    ),
+);
+await Promise.all(
+  triples.filter(({ rel }) => rel.label === "REFERENCE").map(
     async ({ from, to, rel }) => {
-      const author = await collAuthors.findOne({ uuid: to });
-      if (!author) return;
+      const referencedTo = await collMaterials.findOne({ uuid: to });
+      if (!referencedTo) return;
       await collMaterials.updateOne(
         { uuid: from },
-        { $addToSet: { authors: { id: author._id } } },
+        {
+          $addToSet: { references: { id: referencedTo._id } },
+        },
       );
     },
   ),
 );
 await Promise.all(
-  triples.filter(({ rel }) => rel.label === "REFERENCE").map(
+  triples.filter((v): v is PredTranslate => v.rel.label === "TRANSLATE").map(
     async ({ from, to, rel }) => {
-      const referenced = await collMaterials.findOne({ uuid: to });
-      if (!referenced) return;
+      const translatedTo = await collMaterials.findOne({ uuid: to });
+      if (!translatedTo) return;
       await collMaterials.updateOne(
         { uuid: from },
-        { $addToSet: { references: { id: referenced._id } } },
+        {
+          $addToSet: { translates: { id: translatedTo._id, lang: rel.lang } },
+        },
       );
     },
   ),
