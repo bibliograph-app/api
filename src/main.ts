@@ -7,7 +7,7 @@ async function bootstrap() {
   await app.listen(
     process.env.PORT
       ? parseInt(process.env.PORT, 10)
-      : 3000,
+      : 4000,
   );
 }
 bootstrap();
