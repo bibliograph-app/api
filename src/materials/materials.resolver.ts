@@ -15,8 +15,13 @@ export class MaterialsResolver {
   async getMaterial(@Args("id") id: string): Promise<MaterialDto> {
     const material = await this.materials.getMaterialById(id);
     if (!material) throw new NotFoundException(`Material not found. (id: ${id})`, "?");
-
     return material;
+  }
+
+  @Query("materials")
+  async getMaterials(): Promise<MaterialDto[]> {
+    const materials = await this.materials.getAllMaterials();
+    return materials;
   }
 
   @ResolveField("references")

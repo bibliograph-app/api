@@ -16,6 +16,7 @@ export interface Author {
 export interface IQuery {
     author(id: string): Author | Promise<Author>;
     material(id: string): Material | Promise<Material>;
+    materials(): Material[] | Promise<Material[]>;
 }
 
 export interface Reference {

@@ -23,4 +23,5 @@ type Material {
 
 type Query {
   material(id: ID!): Material!
+  materials: [Material!]!
 }

@@ -11,6 +11,20 @@ export class MaterialsService {
   ) {
   }
 
+  async getAllMaterials(): Promise<
+    { id: string; title: string; isbn13: string | null }[]
+  > {
+    const meterials = await this.materialsModel.find()
+      .exec()
+      .then((vs) => vs.map((v) => v.toJSON<{ uuid: string; title: string; isbn13?: string }>()));
+
+    return meterials.map(({ title, uuid, isbn13 }) => ({
+      id: uuid,
+      title,
+      isbn13: isbn13 || null,
+    }));
+  }
+
   async getMaterialById(id: string): Promise<
     | null
     | { id: string; title: string; isbn13: string | null }
