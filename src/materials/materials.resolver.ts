@@ -24,6 +24,15 @@ export class MaterialsResolver {
     return materials;
   }
 
+  @ResolveField("cover")
+  async cover(@Parent() parent: MaterialDto) {
+    if (parent.isbn13) {
+      const bookcover = await this.materials.getBookcover(parent.isbn13);
+      return bookcover;
+    }
+    return null;
+  }
+
   @ResolveField("references")
   async resolveReferences(
     @Parent() parent: MaterialDto,

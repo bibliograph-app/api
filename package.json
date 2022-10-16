@@ -19,6 +19,7 @@
     "apollo-server-express": "^3.10.3",
     "graphql": "^16.6.0",
     "mongoose": "^6.6.5",
+    "nestjs-http-promise": "^2.0.0",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {

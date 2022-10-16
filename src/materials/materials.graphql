@@ -10,6 +10,7 @@ type Material {
   id: ID!
   title: String!
   isbn13: String
+  cover: String
 
   authorships(
     limit: Int

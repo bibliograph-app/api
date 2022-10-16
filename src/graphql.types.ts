@@ -31,6 +31,7 @@ export interface Material {
     id: string;
     title: string;
     isbn13?: Nullable<string>;
+    cover?: Nullable<string>;
     authorships: Authorship[];
     references: Reference[];
 }

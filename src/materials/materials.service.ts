@@ -1,14 +1,29 @@
-import { Injectable } from "@nestjs/common";
+import { Inject, Injectable } from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
+import { HttpService } from "nestjs-http-promise";
 
 import { Material } from "./materials.model";
 
 @Injectable()
 export class MaterialsService {
   constructor(
+    @Inject(HttpService) private readonly http: HttpService,
     @InjectModel(Material.name) private materialsModel: Model<Material>,
   ) {
+  }
+
+  async getBookcover(isbn13: string): Promise<string | null> {
+    try {
+      const url = new URL(`/isbn13/${isbn13}`, "http://127.0.0.1:8080/");
+      const data = await this.http
+        .get<string | null>(url.toString())
+        .then((v) => v.data);
+      return data;
+    } catch (e) {
+      console.dir(e);
+      return null;
+    }
   }
 
   async getAllMaterials(): Promise<
