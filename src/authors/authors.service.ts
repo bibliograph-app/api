@@ -35,4 +35,52 @@ export class AuthorsService {
       // names: author.names,
     };
   }
+
+  async getAuthorshipsById(
+    id: string,
+    { skip, limit }: { skip: number; limit: number },
+  ): Promise<{ authorId: string; materialId: string; roles: string[] }[]> {
+    const authorships = await this.auhtorModel
+      .aggregate<
+        {
+          authorId: string;
+          materialId: string;
+          roles: string[];
+        }
+      >([
+        {
+          $match: { uuid: id },
+        },
+        {
+          $lookup: {
+            from: "materials",
+            localField: "_id",
+            foreignField: "authorships.id",
+            as: "materials",
+          },
+        },
+        {
+          $unwind: {
+            path: "$materials",
+          },
+        },
+        {
+          $unwind: {
+            path: "$materials.authorships",
+          },
+        },
+        {
+          $project: {
+            "_id": 0,
+            "authorId": "$uuid",
+            "materialId": "$materials.uuid",
+            "roles": "$materials.authorships.roles",
+          },
+        },
+        { $limit: limit },
+        { $skip: skip },
+      ]);
+
+    return authorships;
+  }
 }

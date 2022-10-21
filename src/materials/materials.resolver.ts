@@ -1,7 +1,7 @@
 import { BadRequestException, Inject, NotFoundException } from "@nestjs/common";
 import { Args, Parent, Query, ResolveField, Resolver } from "@nestjs/graphql";
 
-import { MaterialDto } from "./materials.dto";
+import { AuthorshipDto, MaterialDto } from "./materials.dto";
 import { MaterialsService } from "./materials.service";
 
 @Resolver("Material")
@@ -39,7 +39,7 @@ export class MaterialsResolver {
     @Args("skip") skip: number,
     @Args("limit") limit: number,
   ): Promise<
-    { material: { id: string; title: string } }[]
+    { material: MaterialDto }[]
   > {
     if (skip < 0) {
       throw new BadRequestException(
@@ -70,5 +70,11 @@ export class MaterialsResolver {
     }
 
     return this.materials.getAuthorshipsById(parent.id, { limit: limit || null });
+  }
+
+  @ResolveField("material")
+  @Resolver("Authorship")
+  async resolveAuthorshipMaterial(@Parent() parent: AuthorshipDto): Promise<MaterialDto> {
+    return this.getMaterial(parent.materialId);
   }
 }

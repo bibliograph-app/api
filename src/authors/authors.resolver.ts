@@ -1,6 +1,8 @@
 import { Inject, NotFoundException } from "@nestjs/common";
 import { Args, Parent, Query, ResolveField, Resolver } from "@nestjs/graphql";
 
+import { AuthorshipDto } from "~/materials/materials.dto";
+
 import { AuthorDto } from "./authors.dto";
 import { AuthorsService } from "./authors.service";
 
@@ -21,5 +23,20 @@ export class AuthorsResolver {
   @ResolveField("name")
   resolveName(@Parent() dto: AuthorDto): string {
     return dto.names[0].name;
+  }
+
+  @ResolveField("authorships")
+  resolveAuthorships(
+    @Parent() parent: AuthorDto,
+    @Args("skip") skip: number,
+    @Args("limit") limit: number,
+  ): Promise<AuthorshipDto[]> {
+    return this.authors.getAuthorshipsById(parent.id, { skip, limit });
+  }
+
+  @ResolveField("author")
+  @Resolver("Authorship")
+  async resolveAuthorshipAuthor(@Parent() parent: AuthorshipDto): Promise<AuthorDto> {
+    return this.getAuthor(parent.authorId);
   }
 }

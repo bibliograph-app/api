@@ -11,6 +11,7 @@
 export interface Author {
     id: string;
     name: string;
+    authorships: Authorship[];
 }
 
 export interface IQuery {
@@ -25,6 +26,8 @@ export interface Reference {
 
 export interface Authorship {
     author: Author;
+    material: Material;
+    roles: string[];
 }
 
 export interface Material {

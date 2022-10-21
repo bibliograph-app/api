@@ -1,6 +1,10 @@
 type Author {
   id: ID!
   name: String!
+  authorships(
+    skip: Int! = 0
+    limit: Int! = 10
+  ): [Authorship!]!
 }
 
 type Query {

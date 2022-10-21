@@ -1,3 +1,11 @@
-import { Material } from "~/graphql.types";
+export type MaterialDto = {
+  id: string;
+  title: string;
+  isbn13: string | null;
+};
 
-export type MaterialDto = Omit<Material, "references" | "authorships">;
+export type AuthorshipDto = {
+  authorId: string;
+  materialId: string;
+  roles: string[];
+};
