@@ -71,7 +71,7 @@ export class MaterialsService {
     { skip, limit }: { skip: number; limit: number },
   ): Promise<
     {
-      material: { id: string; title: string };
+      material: { id: string; title: string; isbn13: string | null };
     }[]
   > {
     const references = await this.materialsModel
@@ -80,6 +80,7 @@ export class MaterialsService {
           material: {
             id: string;
             title: string;
+            isbn13: string | null;
           };
         }
       >([
@@ -128,14 +129,16 @@ export class MaterialsService {
     { limit }: { limit: number | null },
   ): Promise<
     {
-      author: { id: string; names: { name: string }[] };
+      authorId: string;
+      materialId: string;
       roles: string[];
     }[]
   > {
     const references = await this.materialsModel
       .aggregate<
         {
-          author: { id: string; names: { name: string }[] };
+          authorId: string;
+          materialId: string;
           roles: string[];
         }
       >([
@@ -163,8 +166,8 @@ export class MaterialsService {
         {
           $project: {
             "_id": 0,
-            "author.id": "$authorships.author.uuid",
-            "author.names": "$authorships.author.names",
+            "materialId": "$uuid",
+            "authorId": "$authorships.author.uuid",
             "roles": "$authorships.roles",
           },
         },

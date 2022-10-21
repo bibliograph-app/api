@@ -39,7 +39,11 @@ export class AuthorsService {
   async getAuthorshipsById(
     id: string,
     { skip, limit }: { skip: number; limit: number },
-  ): Promise<{ authorId: string; materialId: string; roles: string[] }[]> {
+  ): Promise<{
+    authorId: string;
+    materialId: string;
+    roles: string[];
+  }[]> {
     const authorships = await this.auhtorModel
       .aggregate<
         {

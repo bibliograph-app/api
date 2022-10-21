@@ -59,16 +59,12 @@ export class MaterialsResolver {
   async resolveAuthorships(
     @Parent() parent: MaterialDto,
     @Args("limit") limit?: number,
-  ): Promise<{
-    author: { id: string; names: { name: string }[] };
-    roles: string[];
-  }[]> {
+  ): Promise<AuthorshipDto[]> {
     if (limit && limit <= 0) {
       throw new BadRequestException(
         `Arg \`limit\` in \`Material.authorship\` must be > 0 if specified (limit: ${limit})`,
       );
     }
-
     return this.materials.getAuthorshipsById(parent.id, { limit: limit || null });
   }
 
