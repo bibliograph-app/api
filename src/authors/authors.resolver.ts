@@ -20,6 +20,12 @@ export class AuthorsResolver {
     return res;
   }
 
+  @Query("authors")
+  async getAuthors(): Promise<AuthorDto[]> {
+    const authors = await this.authors.getAllAuthors();
+    return authors;
+  }
+
   @ResolveField("name")
   resolveName(@Parent() dto: AuthorDto): string {
     return dto.names[0].name;

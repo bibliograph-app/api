@@ -36,6 +36,14 @@ export class AuthorsService {
     };
   }
 
+  async getAllAuthors(): Promise<{ id: string; names: { name: string }[] }[]> {
+    const authors = await this.auhtorModel
+      .find({}, { id: "$uuid", names: "$names" })
+      .exec()
+      .then((vs) => vs.map((v) => v.toJSON<{ id: string; names: { name: string }[] }>()));
+    return authors;
+  }
+
   async getAuthorshipsById(
     id: string,
     { skip, limit }: { skip: number; limit: number },
