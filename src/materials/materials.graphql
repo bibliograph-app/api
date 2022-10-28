@@ -5,7 +5,7 @@ type Reference {
 type Authorship {
   author: Author!
   material: Material!
-  roles: [String!]!
+  roles: [String!]
 }
 
 type Material {

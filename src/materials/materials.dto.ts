@@ -7,5 +7,5 @@ export type MaterialDto = {
 export type AuthorshipDto = {
   authorId: string;
   materialId: string;
-  roles: string[];
+  roles: string[] | null;
 };

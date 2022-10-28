@@ -50,7 +50,7 @@ export class AuthorsService {
   ): Promise<{
     authorId: string;
     materialId: string;
-    roles: string[];
+    roles: string[] | null;
   }[]> {
     const authorships = await this.auhtorModel
       .aggregate<
@@ -67,20 +67,14 @@ export class AuthorsService {
           $lookup: {
             from: "materials",
             localField: "_id",
-            foreignField: "authorships.id",
+            foreignField: "authorships.author",
             as: "materials",
           },
         },
-        {
-          $unwind: {
-            path: "$materials",
-          },
-        },
-        {
-          $unwind: {
-            path: "$materials.authorships",
-          },
-        },
+        { $unwind: { path: "$materials" } },
+        { $unwind: { path: "$materials.authorships" } },
+        { $addFields: { "eq": { $eq: ["$_id", "$materials.authorships.author"] } } },
+        { $match: { "eq": true } },
         {
           $project: {
             "_id": 0,

@@ -28,7 +28,7 @@ export interface Reference {
 export interface Authorship {
     author: Author;
     material: Material;
-    roles: string[];
+    roles?: Nullable<string[]>;
 }
 
 export interface Material {
