@@ -28,7 +28,7 @@ export class AuthorsResolver {
 
   @ResolveField("name")
   resolveName(@Parent() dto: AuthorDto): string {
-    return dto.names[0].name;
+    return dto.names[0].value;
   }
 
   @ResolveField("authorships")

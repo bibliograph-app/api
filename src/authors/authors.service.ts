@@ -13,7 +13,7 @@ export class AuthorsService {
 
   async getAuthorById(id: string): Promise<
     | null
-    | { id: string; names: { name: string }[] }
+    | { id: string; names: { value: string }[] }
   > {
     const author = await this.auhtorModel
       .findOne(
@@ -24,7 +24,7 @@ export class AuthorsService {
       .then((v) =>
         v?.toJSON<{
           uuid: string;
-          names: { name: string }[];
+          names: { value: string }[];
         }>()
       );
     if (!author) return null;
@@ -36,11 +36,11 @@ export class AuthorsService {
     };
   }
 
-  async getAllAuthors(): Promise<{ id: string; names: { name: string }[] }[]> {
+  async getAllAuthors(): Promise<{ id: string; names: { value: string }[] }[]> {
     const authors = await this.auhtorModel
       .find({}, { id: "$uuid", names: "$names" })
       .exec()
-      .then((vs) => vs.map((v) => v.toJSON<{ id: string; names: { name: string }[] }>()));
+      .then((vs) => vs.map((v) => v.toJSON<{ id: string; names: { value: string }[] }>()));
     return authors;
   }
 

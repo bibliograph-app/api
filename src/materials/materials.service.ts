@@ -153,7 +153,7 @@ export class MaterialsService {
         {
           $lookup: {
             from: "authors",
-            localField: "authorships.id",
+            localField: "authorships.author",
             foreignField: "_id",
             as: "authorships.author",
           },
